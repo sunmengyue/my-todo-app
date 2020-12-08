@@ -12,10 +12,14 @@ const App = () => {
     setTodos([...todos, newTodo]);
   }
 
+  function deleteTodo(id) {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
+
   return (
     <div className='container'>
       <TodoForm todos={todos} addTodo={addTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodo} />
     </div>
   );
 };

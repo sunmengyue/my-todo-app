@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Todo from './Todo';
-import { v4 as uuidv4 } from 'uuid';
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, deleteTodo }) => {
   const todoItems = todos.map((todo) => {
-    return <Todo todo={todo} key={uuidv4()} />;
+    return (
+      <Todo todo={todo} key={todo.id} deleteTodo={deleteTodo} id={todo.id} />
+    );
   });
   return <div className='list-group mt-3'>{todoItems}</div>;
 };

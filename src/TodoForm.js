@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState('');
   function handleChange(e) {
     setValue(e.target.value);
   }
+
   function handleSubmit(e) {
     e.preventDefault();
-    // add one new todo Item on todolist
-    addTodo({ task: value, completed: false });
-
+    addTodo({ id: uuidv4(), task: value, completed: false });
     //save to local storage
+    e.target.value = '';
   }
   return (
     <form className='d-flex mt-5' onSubmit={handleSubmit}>
