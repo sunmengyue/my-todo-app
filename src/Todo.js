@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import './styles/Todo.css';
 
-const Todo = ({ todo, deleteTodo, id }) => {
-  const [completeStatus, setCompleteStatus] = useState(false);
-  function toggleStatus() {
-    setCompleteStatus(!completeStatus);
-  }
-
+const Todo = ({ todo, deleteTodo, id, toggleTodo }) => {
   return (
     <div className='d-flex flex-row align-items-center justify-content-between'>
       <label className='list-group-item border-0'>
@@ -14,9 +9,9 @@ const Todo = ({ todo, deleteTodo, id }) => {
           className='form-check-input me-2'
           type='checkbox'
           value=''
-          onChange={toggleStatus}
+          onChange={() => toggleTodo(id)}
         />
-        {todo.task}
+        <span className='strikethrough'>{todo.task}</span>
       </label>
       <i
         className='material-icons md-36 md-dark'

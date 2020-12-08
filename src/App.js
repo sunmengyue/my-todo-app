@@ -16,10 +16,17 @@ const App = () => {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
 
+  function toggleTodo(id) {
+    const updatedTodos = todos.map((todo) => {
+      return todo.id === id ? { ...todo, completed: !todo.completed } : todo;
+    });
+    setTodos(updatedTodos);
+  }
+
   return (
     <div className='container'>
       <TodoForm todos={todos} addTodo={addTodo} />
-      <TodoList todos={todos} deleteTodo={deleteTodo} />
+      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
     </div>
   );
 };
