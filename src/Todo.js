@@ -11,7 +11,9 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo }) => {
           value=''
           onChange={() => toggleTodo(id)}
         />
-        <span className='strikethrough'>{todo.task}</span>
+        <span className={`${todo.completed ? 'strikethrough' : ''}`}>
+          {todo.task}
+        </span>
       </label>
       <i
         className='material-icons md-36 md-dark'
