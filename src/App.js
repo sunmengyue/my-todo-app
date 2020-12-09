@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import TodoList from './components/TodoList';
-import TodoForm from './components/TodoForm';
 import Nav from './components/Nav';
+import Active from './tabs/Active';
+import Completed from './tabs/Completed';
+import Route from './components/Route';
+import All from './tabs/All';
 
 const App = () => {
   //   let todos = [
@@ -9,26 +11,42 @@ const App = () => {
   //     {id: 2, task: 'complete coding challenge', completed: false },
   //   ];
   const [todos, setTodos] = useState([]);
-  function addTodo(newTodo) {
+  const addTodo = (newTodo) => {
     setTodos([...todos, newTodo]);
-  }
+  };
 
-  function deleteTodo(id) {
+  const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
-  }
+  };
 
-  function toggleTodo(id) {
+  const toggleTodo = (id) => {
     const updatedTodos = todos.map((todo) => {
       return todo.id === id ? { ...todo, completed: !todo.completed } : todo;
     });
     setTodos(updatedTodos);
-  }
+  };
 
   return (
     <div className='container mt-5'>
       <Nav />
-      <TodoForm todos={todos} addTodo={addTodo} />
-      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
+      <Route path='/'>
+        <All
+          todos={todos}
+          addTodo={addTodo}
+          deleteTodo={deleteTodo}
+          toggleTodo={toggleTodo}
+        />
+      </Route>
+      <Route path='/active'>
+        <Active todos={todos} addTodo={addTodo} />
+      </Route>
+      <Route path='/completed'>
+        <Completed
+          todos={todos}
+          deleteTodo={deleteTodo}
+          toggleTodo={toggleTodo}
+        />
+      </Route>
     </div>
   );
 };

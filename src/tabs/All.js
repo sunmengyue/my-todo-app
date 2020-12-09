@@ -1,16 +1,16 @@
 import React from 'react';
-import Nav from '../components/Nav';
 import TodoList from '../components/TodoList';
 import TodoForm from '../components/TodoForm';
+import Nav from '../components/Nav';
 
-const Active = ({ todos, addTodo, toggleTodo }) => {
+const All = ({ todos, addTodo, deleteTodo, toggleTodo }) => {
   return (
     <div className='container mt-5'>
-      <h1>Active</h1>
+      <h1>All</h1>
       <TodoForm todos={todos} addTodo={addTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
     </div>
   );
 };
 
-export default Active;
+export default All;

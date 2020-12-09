@@ -1,22 +1,23 @@
 import React from 'react';
+import Link from './Link';
 
 const Nav = () => {
   return (
     <ul className='nav'>
       <li className='nav-item'>
-        <a className='nav-link active' aria-current='page' href='#'>
+        <Link className='nav-link active' aria-current='page' href='/'>
           All
-        </a>
+        </Link>
       </li>
       <li className='nav-item'>
-        <a className='nav-link' aria-current='page' href='#'>
+        <Link className='nav-link' aria-current='page' href='/active'>
           Active
-        </a>
+        </Link>
       </li>
       <li className='nav-item'>
-        <a className='nav-link' aria-current='page' href='#'>
+        <Link className='nav-link' aria-current='page' href='/completed'>
           Completed
-        </a>
+        </Link>
       </li>
     </ul>
   );
