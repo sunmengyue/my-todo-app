@@ -11,7 +11,6 @@ const TodoForm = ({ addTodo }) => {
     e.preventDefault();
     addTodo({ id: uuidv4(), task: value, completed: false });
     //save to local storage
-    e.target.value = '';
   }
   return (
     <form className='d-flex mt-5' onSubmit={handleSubmit}>

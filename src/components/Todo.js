@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './styles/Todo.css';
+import React from 'react';
+import '../styles/Todo.css';
 
 const Todo = ({ todo, deleteTodo, id, toggleTodo }) => {
   return (
