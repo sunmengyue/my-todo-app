@@ -3,12 +3,12 @@ import Nav from '../components/Nav';
 import TodoList from '../components/TodoList';
 import TodoForm from '../components/TodoForm';
 
-const Active = ({ todos, addTodo, toggleTodo }) => {
+const Active = ({ todos, addTodo, toggleTodo, deleteTodo }) => {
   return (
     <div className='container mt-5'>
       <h1>Active</h1>
       <TodoForm todos={todos} addTodo={addTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
     </div>
   );
 };

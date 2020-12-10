@@ -10,6 +10,7 @@ const TodoForm = ({ addTodo }) => {
   function handleSubmit(e) {
     e.preventDefault();
     addTodo({ id: uuidv4(), task: value, completed: false });
+    setValue('');
     //save to local storage
   }
   return (

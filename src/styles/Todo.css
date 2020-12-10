@@ -38,7 +38,7 @@
 .strikethrough {
   display: inline-block;
   position: relative;
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  /* transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1); */
 }
 
 .strikethrough:after {

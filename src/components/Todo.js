@@ -9,6 +9,7 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo }) => {
           className='form-check-input me-2'
           type='checkbox'
           value=''
+          checked={todo.completed}
           onChange={() => toggleTodo(id)}
         />
         <span className={`${todo.completed ? 'strikethrough' : ''}`}>
