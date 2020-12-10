@@ -13,12 +13,12 @@ const App = () => {
   //   ];
   const [todos, setTodos] = useState(initialTodos);
   const addTodo = (newTodo) => {
-    setTodos([...todos, newTodo]);
+    if (newTodo.task) {
+      setTodos([...todos, newTodo]);
+    } else {
+      alert('please provide a task :)');
+    }
   };
-
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }, [todos]);
 
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
@@ -31,6 +31,17 @@ const App = () => {
     setTodos(updatedTodos);
   };
 
+  const editTodo = (id, newTask) => {
+    const updateTodos = todos.map((todo) => {
+      return todo.id === id ? { ...todo, task: newTask } : todo;
+    });
+    setTodos(updateTodos);
+  };
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
   return (
     <div className='container mt-5'>
       <Nav />
@@ -40,6 +51,7 @@ const App = () => {
           addTodo={addTodo}
           deleteTodo={deleteTodo}
           toggleTodo={toggleTodo}
+          editTodo={editTodo}
         />
       </Route>
       <Route path='/active'>
@@ -48,6 +60,7 @@ const App = () => {
           addTodo={addTodo}
           deleteTodo={deleteTodo}
           toggleTodo={toggleTodo}
+          editTodo={editTodo}
         />
       </Route>
       <Route path='/completed'>

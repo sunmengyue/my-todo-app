@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Todo from './Todo';
 
-const TodoList = ({ todos, deleteTodo, toggleTodo }) => {
+const TodoList = ({ todos, deleteTodo, toggleTodo, editTodo }) => {
   const todoItems = todos.map((todo) => {
     return (
       <Todo
@@ -10,6 +10,7 @@ const TodoList = ({ todos, deleteTodo, toggleTodo }) => {
         deleteTodo={deleteTodo}
         toggleTodo={toggleTodo}
         id={todo.id}
+        editTodo={editTodo}
       />
     );
   });
