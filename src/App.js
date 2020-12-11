@@ -7,10 +7,7 @@ import All from './tabs/All';
 
 const App = () => {
   const initialTodos = JSON.parse(localStorage.getItem('todos')) || [];
-  //   let todos = [
-  //     {id: 1, task: 'walk my cat', completed: false },
-  //     {id: 2, task: 'complete coding challenge', completed: false },
-  //   ];
+
   const [todos, setTodos] = useState(initialTodos);
   const addTodo = (newTodo) => {
     if (newTodo.task) {
@@ -28,6 +25,7 @@ const App = () => {
     const updatedTodos = todos.map((todo) => {
       return todo.id === id ? { ...todo, completed: !todo.completed } : todo;
     });
+
     setTodos(updatedTodos);
   };
 
@@ -49,7 +47,6 @@ const App = () => {
         <All
           todos={todos}
           addTodo={addTodo}
-          deleteTodo={deleteTodo}
           toggleTodo={toggleTodo}
           editTodo={editTodo}
         />
@@ -58,7 +55,6 @@ const App = () => {
         <Active
           todos={todos}
           addTodo={addTodo}
-          deleteTodo={deleteTodo}
           toggleTodo={toggleTodo}
           editTodo={editTodo}
         />

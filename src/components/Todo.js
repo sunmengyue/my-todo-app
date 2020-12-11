@@ -36,12 +36,16 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo, editTodo }) => {
           >
             edit
           </i>
-          <i
-            className='material-icons md-36 md-dark'
-            onClick={() => deleteTodo(id)}
-          >
-            delete
-          </i>
+          {window.location.pathname === '/completed' ? (
+            <i
+              className='material-icons md-36 md-dark'
+              onClick={() => deleteTodo(id)}
+            >
+              delete
+            </i>
+          ) : (
+            ''
+          )}
         </>
       )}
     </div>
