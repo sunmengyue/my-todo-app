@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import Todo from './Todo';
 
-const TodoList = ({ todos, deleteTodo, toggleTodo, editTodo }) => {
-  const todoItems = todos.map((todo) => {
+const TodoList = ({
+  todos,
+  deleteTodo,
+  toggleTodo,
+  editTodo,
+  filteredTodos,
+}) => {
+  const todoItems = filteredTodos.map((todo) => {
     return (
       <Todo
         todo={todo}

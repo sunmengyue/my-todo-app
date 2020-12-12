@@ -3,7 +3,14 @@ import TodoList from '../components/TodoList';
 import TodoForm from '../components/TodoForm';
 import Nav from '../components/Nav';
 
-const All = ({ todos, addTodo, deleteTodo, toggleTodo, editTodo }) => {
+const All = ({
+  todos,
+  addTodo,
+  deleteTodo,
+  toggleTodo,
+  editTodo,
+  filteredTodos,
+}) => {
   return (
     <div className='container mt-5'>
       <h1>All</h1>
@@ -13,6 +20,7 @@ const All = ({ todos, addTodo, deleteTodo, toggleTodo, editTodo }) => {
         deleteTodo={deleteTodo}
         toggleTodo={toggleTodo}
         editTodo={editTodo}
+        filteredTodos={filteredTodos}
       />
     </div>
   );

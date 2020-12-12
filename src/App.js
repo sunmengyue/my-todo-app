@@ -9,6 +9,9 @@ const App = () => {
   const initialTodos = JSON.parse(localStorage.getItem('todos')) || [];
 
   const [todos, setTodos] = useState(initialTodos);
+  const [status, setStatus] = useState('All');
+  const [filteredTodos, setFilteredTodos] = useState([]);
+
   const addTodo = (newTodo) => {
     if (newTodo.task) {
       setTodos([...todos, newTodo]);
@@ -36,19 +39,36 @@ const App = () => {
     setTodos(updateTodos);
   };
 
+  const filterHandler = () => {
+    switch (status) {
+      case 'Active':
+        setFilteredTodos(todos.filter((todo) => todo.completed === false));
+        break;
+      case 'Completed':
+        setFilteredTodos(todos.filter((todo) => todo.completed === true));
+        break;
+      default:
+        setFilteredTodos(todos);
+        break;
+    }
+  };
+
   useEffect(() => {
+    filterHandler();
+
     localStorage.setItem('todos', JSON.stringify(todos));
-  }, [todos]);
+  }, [todos, status]);
 
   return (
     <div className='container mt-5'>
-      <Nav />
+      <Nav setStatus={setStatus} />
       <Route path='/'>
         <All
           todos={todos}
           addTodo={addTodo}
           toggleTodo={toggleTodo}
           editTodo={editTodo}
+          filteredTodos={filteredTodos}
         />
       </Route>
       <Route path='/active'>
@@ -57,6 +77,7 @@ const App = () => {
           addTodo={addTodo}
           toggleTodo={toggleTodo}
           editTodo={editTodo}
+          filteredTodos={filteredTodos}
         />
       </Route>
       <Route path='/completed'>
@@ -64,6 +85,7 @@ const App = () => {
           todos={todos}
           deleteTodo={deleteTodo}
           toggleTodo={toggleTodo}
+          filteredTodos={filteredTodos}
         />
       </Route>
     </div>

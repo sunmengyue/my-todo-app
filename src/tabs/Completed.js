@@ -2,11 +2,16 @@ import React from 'react';
 import Nav from '../components/Nav';
 import TodoList from '../components/TodoList';
 
-const Completed = ({ todos, deleteTodo, toggleTodo }) => {
+const Completed = ({ todos, deleteTodo, toggleTodo, filteredTodos }) => {
   return (
     <div className='container mt-5'>
       <h1>Completed</h1>
-      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
+      <TodoList
+        todos={todos}
+        deleteTodo={deleteTodo}
+        toggleTodo={toggleTodo}
+        filteredTodos={filteredTodos}
+      />
     </div>
   );
 };
