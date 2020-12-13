@@ -5,7 +5,6 @@ import TodoList from '../components/TodoList';
 const Completed = ({ todos, deleteTodo, toggleTodo, filteredTodos }) => {
   return (
     <div className='container mt-5'>
-      <h1>Completed</h1>
       <TodoList
         todos={todos}
         deleteTodo={deleteTodo}

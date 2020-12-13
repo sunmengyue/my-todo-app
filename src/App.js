@@ -67,6 +67,7 @@ const App = () => {
           todos={todos}
           addTodo={addTodo}
           toggleTodo={toggleTodo}
+          deleteTodo={deleteTodo}
           editTodo={editTodo}
           filteredTodos={filteredTodos}
         />
@@ -76,6 +77,7 @@ const App = () => {
           todos={todos}
           addTodo={addTodo}
           toggleTodo={toggleTodo}
+          deleteTodo={deleteTodo}
           editTodo={editTodo}
           filteredTodos={filteredTodos}
         />

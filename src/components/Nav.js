@@ -6,7 +6,7 @@ const Nav = ({ setStatus }) => {
     setStatus(e.target.innerText);
   };
   return (
-    <ul className='nav' onClick={statusHandler}>
+    <ul className='nav d-flex justify-content-between' onClick={statusHandler}>
       <li className='nav-item'>
         <Link
           className='nav-link'

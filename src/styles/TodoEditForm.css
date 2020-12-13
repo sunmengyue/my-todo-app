@@ -1,0 +1,9 @@
+.edit-form {
+  width: 70%;
+}
+
+.form-control {
+  font-size: 2rem;
+  padding: 0.5em;
+  border-radius: 15px;
+}

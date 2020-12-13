@@ -13,7 +13,6 @@ const Active = ({
 }) => {
   return (
     <div className='container mt-5'>
-      <h1>Active</h1>
       <TodoForm todos={todos} addTodo={addTodo} />
       <TodoList
         todos={todos}

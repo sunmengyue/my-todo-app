@@ -1,0 +1,13 @@
+#task-input,
+#task-add-button {
+  padding: 0.8em;
+  border-radius: 15px;
+}
+
+.form-control {
+  width: 90%;
+}
+
+#task-add-button {
+  width: 14%;
+}

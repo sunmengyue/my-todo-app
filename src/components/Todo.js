@@ -26,7 +26,7 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo, editTodo }) => {
               checked={todo.completed}
               onChange={() => toggleTodo(id)}
             />
-            <span className={`${todo.completed ? 'strikethrough' : ''}`}>
+            <span className={todo.completed ? 'task-label' : ''}>
               {todo.task}
             </span>
           </label>
@@ -36,16 +36,12 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo, editTodo }) => {
           >
             edit
           </i>
-          {window.location.pathname === '/completed' ? (
-            <i
-              className='material-icons md-36 md-dark'
-              onClick={() => deleteTodo(id)}
-            >
-              delete
-            </i>
-          ) : (
-            ''
-          )}
+          <i
+            className='material-icons md-36 md-dark'
+            onClick={() => deleteTodo(id)}
+          >
+            delete
+          </i>
         </>
       )}
     </div>

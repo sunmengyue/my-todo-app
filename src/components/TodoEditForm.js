@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/TodoEditForm.css';
 
 const TodoEditForm = ({ todo, editTodo, toggle }) => {
   const [value, setValue] = useState(todo.task);
@@ -12,10 +13,10 @@ const TodoEditForm = ({ todo, editTodo, toggle }) => {
     toggle();
   };
   return (
-    <form onSubmit={handleInputSubmit}>
+    <form onSubmit={handleInputSubmit} className='edit-form'>
       <input
         type='text'
-        className='form-control form-control-lg'
+        className='form-control form-control-lg fs-4'
         value={value}
         onChange={handleChange}
         autoFocus
