@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from '../components/Nav';
 import TodoList from '../components/TodoList';
 import TodoForm from '../components/TodoForm';
 

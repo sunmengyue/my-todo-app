@@ -4,6 +4,7 @@ import Active from './tabs/Active';
 import Completed from './tabs/Completed';
 import Route from './components/Route';
 import All from './tabs/All';
+import './styles/App.css';
 
 const App = () => {
   const initialTodos = JSON.parse(localStorage.getItem('todos')) || [];
@@ -55,12 +56,14 @@ const App = () => {
 
   useEffect(() => {
     filterHandler();
-
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos, status]);
 
   return (
     <div className='container mt-5'>
+      <h1 className='text-center mb-5' id='title'>
+        Task Slayer
+      </h1>
       <Nav setStatus={setStatus} />
       <Route path='/'>
         <All

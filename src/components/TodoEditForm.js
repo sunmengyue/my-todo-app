@@ -16,7 +16,7 @@ const TodoEditForm = ({ todo, editTodo, toggle }) => {
     <form onSubmit={handleInputSubmit} className='edit-form'>
       <input
         type='text'
-        className='form-control form-control-lg fs-4'
+        className='form-control form-control-lg fs-4 shadow-none'
         value={value}
         onChange={handleChange}
         autoFocus

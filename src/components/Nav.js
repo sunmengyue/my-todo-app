@@ -1,12 +1,16 @@
 import React from 'react';
 import Link from './Link';
+import '../styles/Nav.css';
 
 const Nav = ({ setStatus }) => {
   const statusHandler = (e) => {
     setStatus(e.target.innerText);
   };
   return (
-    <ul className='nav d-flex justify-content-between' onClick={statusHandler}>
+    <ul
+      className='nav d-flex justify-content-between mt-3'
+      onClick={statusHandler}
+    >
       <li className='nav-item'>
         <Link
           className='nav-link'

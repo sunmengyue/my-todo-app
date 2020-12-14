@@ -14,11 +14,11 @@ const TodoForm = ({ addTodo }) => {
     setValue('');
   }
   return (
-    <form className='d-flex mt-5' onSubmit={handleSubmit}>
+    <form className='d-flex align-items-center' onSubmit={handleSubmit}>
       <input
         placeholder='add todo details'
         type='text'
-        className='form-control me-5 fs-4'
+        className='form-control me-5 fs-4 shadow-none'
         value={value}
         onChange={handleChange}
         id='task-input'

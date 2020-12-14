@@ -17,7 +17,7 @@ const TodoList = ({ deleteTodo, toggleTodo, editTodo, filteredTodos }) => {
   });
   return (
     <>
-      <div className='list-group mt-3'>{todoItems}</div>
+      <div className='list-group mt-5'>{todoItems}</div>
       {window.location.pathname === '/completed' ? (
         <div className='d-flex'>
           <button type='button' className='btn btn-danger mt-5 ms-auto'>
