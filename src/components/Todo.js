@@ -9,7 +9,7 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo, editTodo }) => {
   };
 
   return (
-    <div className='d-flex flex-row align-items-center mb-4'>
+    <div className='d-flex flex-row align-items-center mb-3'>
       {isEditing ? (
         <TodoEditForm
           todo={todo}
