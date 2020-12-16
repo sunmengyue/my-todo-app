@@ -30,12 +30,17 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo, editTodo }) => {
               {todo.task}
             </span>
           </label>
-          <i
-            className='material-icons md-36 md-dark me-5'
-            onClick={toggleEditingStatus}
-          >
-            edit
-          </i>
+          {window.location.pathname === '/completed' ? (
+            ''
+          ) : (
+            <i
+              className='material-icons md-36 md-dark me-5'
+              onClick={toggleEditingStatus}
+            >
+              edit
+            </i>
+          )}
+
           <i
             className='material-icons md-36 md-dark'
             onClick={() => deleteTodo(id)}
