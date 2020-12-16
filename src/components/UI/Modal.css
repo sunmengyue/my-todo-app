@@ -1,0 +1,17 @@
+.confirmBox {
+  box-sizing: border-box;
+  width: 70%;
+  margin-left: 15%;
+  background-color: #ddd;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  padding: 30px;
+  position: fixed;
+  z-index: 500;
+  transition: all 0.3 ease-out;
+}
+
+@media (min-width: 600px) {
+  .confirmBox {
+    width: 500px;
+  }
+} ;
