@@ -54,6 +54,10 @@ const App = () => {
     }
   };
 
+  const deleteAll = () => {
+    setTodos([]);
+  };
+
   useEffect(() => {
     filterHandler();
     localStorage.setItem('todos', JSON.stringify(todos));
@@ -91,6 +95,7 @@ const App = () => {
           deleteTodo={deleteTodo}
           toggleTodo={toggleTodo}
           filteredTodos={filteredTodos}
+          deleteAll={deleteAll}
         />
       </Route>
     </div>

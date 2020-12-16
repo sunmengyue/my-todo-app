@@ -3,10 +3,20 @@ import Todo from './Todo';
 import '../styles/TodoList.css';
 import Modal from './UI/Modal';
 
-const TodoList = ({ deleteTodo, toggleTodo, editTodo, filteredTodos }) => {
+const TodoList = ({
+  deleteTodo,
+  toggleTodo,
+  editTodo,
+  filteredTodos,
+  deleteAll,
+}) => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
+  const confirmDelete = () => {
+    deleteAll();
+    handleClose();
+  };
 
   const todoItems = filteredTodos.map((todo) => {
     return (
@@ -31,7 +41,11 @@ const TodoList = ({ deleteTodo, toggleTodo, editTodo, filteredTodos }) => {
           <button type='button' className='cancleButton' onClick={handleClose}>
             No
           </button>
-          <button type='button' className='confirmButton'>
+          <button
+            type='button'
+            className='confirmButton'
+            onClick={confirmDelete}
+          >
             Yes
           </button>
         </div>
