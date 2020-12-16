@@ -22,7 +22,7 @@ const TodoList = ({ deleteTodo, toggleTodo, editTodo, filteredTodos }) => {
   });
   return (
     <div>
-      <Modal show={show}>
+      <Modal show={show} handleClose={handleClose}>
         <p>
           <i className='material-icons md-48 danger'>priority_high</i>Are you
           sure you want to delete all tasks
