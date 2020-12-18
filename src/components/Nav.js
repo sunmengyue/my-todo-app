@@ -6,6 +6,7 @@ const Nav = ({ setStatus }) => {
   const statusHandler = (e) => {
     setStatus(e.target.innerText);
   };
+
   return (
     <ul
       className='nav d-flex justify-content-between mt-3'

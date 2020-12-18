@@ -36,3 +36,7 @@
 .nav-link:hover::before {
   height: 5px;
 }
+
+.nav-link .currentPage {
+  color: #0d6efd;
+}

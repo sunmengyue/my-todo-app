@@ -8,6 +8,10 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo, editTodo }) => {
     setIsEditing(!isEditing);
   };
 
+  const closeEdit = () => {
+    setIsEditing(false);
+  };
+
   return (
     <div className='d-flex flex-row align-items-center mb-3'>
       {isEditing ? (
@@ -15,6 +19,7 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo, editTodo }) => {
           todo={todo}
           editTodo={editTodo}
           toggle={toggleEditingStatus}
+          closeEdit={closeEdit}
         />
       ) : (
         <>

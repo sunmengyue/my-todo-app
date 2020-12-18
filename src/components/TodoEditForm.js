@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/TodoEditForm.css';
 
-const TodoEditForm = ({ todo, editTodo, toggle }) => {
+const TodoEditForm = ({ todo, editTodo, toggle, closeEdit }) => {
   const [value, setValue] = useState(todo.task);
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -16,11 +16,15 @@ const TodoEditForm = ({ todo, editTodo, toggle }) => {
     <form onSubmit={handleInputSubmit} className='edit-form'>
       <input
         type='text'
-        className='form-control form-control-lg fs-4 shadow-none'
+        className='form-control mb-3 form-control-lg fs-4 shadow-none'
         value={value}
         onChange={handleChange}
         autoFocus
       ></input>
+      <button id='cancleButton' onClick={closeEdit}>
+        Cancle
+      </button>
+      <button id='saveButton'>Save</button>
     </form>
   );
 };
