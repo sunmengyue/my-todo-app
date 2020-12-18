@@ -14,7 +14,9 @@ const Nav = ({ setStatus }) => {
     >
       <li className='nav-item'>
         <Link
-          className='nav-link'
+          className={`${
+            window.location.pathname === '/' ? 'currentPage' : 'nav-link'
+          }`}
           aria-current='page'
           href='/'
           data-bs-toggle='tab'
@@ -27,7 +29,9 @@ const Nav = ({ setStatus }) => {
       </li>
       <li className='nav-item'>
         <Link
-          className='nav-link'
+          className={`${
+            window.location.pathname === '/active' ? 'currentPage' : 'nav-link'
+          }`}
           aria-current='page'
           href='/active'
           data-bs-toggle='tab'
@@ -40,7 +44,11 @@ const Nav = ({ setStatus }) => {
       </li>
       <li className='nav-item'>
         <Link
-          className='nav-link'
+          className={`${
+            window.location.pathname === '/completed'
+              ? 'currentPage'
+              : 'nav-link'
+          }`}
           aria-current='page'
           href='/completed'
           data-bs-toggle='tab'
