@@ -23,8 +23,8 @@
   color: #dc3545;
 }
 
-.cancleButton,
-.confirmButton {
+#cancleButton,
+#confirmButton {
   border-radius: 10px;
   border: none;
   margin-right: 10px;
@@ -32,10 +32,32 @@
   padding: 5px 20px;
 }
 
-.cancleButton {
+#cancleButton {
   background-color: #343a40;
 }
 
-.confirmButton {
+#confirmButton,
+#deleteAllButton {
   background-color: #dc3545;
 }
+
+#deleteAllButton {
+  margin-top: 3rem;
+}
+
+/* Smartphones */
+@media (min-width: 520px) {
+  #deleteAllButton {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  #deleteAllButton {
+    display: block;
+    width: auto;
+    float: right;
+  }
+} ;

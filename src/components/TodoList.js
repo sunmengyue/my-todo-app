@@ -38,14 +38,10 @@ const TodoList = ({
           sure you want to delete all tasks
         </p>
         <div className='float-end'>
-          <button type='button' className='cancleButton' onClick={handleClose}>
+          <button type='button' id='cancleButton' onClick={handleClose}>
             No
           </button>
-          <button
-            type='button'
-            className='confirmButton'
-            onClick={confirmDelete}
-          >
+          <button type='button' id='confirmButton' onClick={confirmDelete}>
             Yes
           </button>
         </div>
@@ -53,15 +49,9 @@ const TodoList = ({
 
       <div className='list-group mt-5'>{todoItems}</div>
       {window.location.pathname === '/completed' ? (
-        <div className='d-flex'>
-          <button
-            type='button'
-            className='btn btn-danger mt-5 ms-auto'
-            onClick={handleShow}
-          >
-            Delete All
-          </button>
-        </div>
+        <button id='deleteAllButton' type='button' onClick={handleShow}>
+          Delete All
+        </button>
       ) : (
         ''
       )}
