@@ -8,21 +8,13 @@ const Nav = ({ setStatus }) => {
   };
 
   return (
-    <ul
-      className='nav d-flex justify-content-between mt-3'
-      onClick={statusHandler}
-    >
+    <ul id='navbar' onClick={statusHandler}>
       <li className='nav-item'>
         <Link
           className={`${
             window.location.pathname === '/' ? 'currentPage' : 'nav-link'
           }`}
-          aria-current='page'
           href='/'
-          data-bs-toggle='tab'
-          role='tab'
-          aria-controls='All'
-          aria-selected='true'
         >
           All
         </Link>
@@ -32,12 +24,7 @@ const Nav = ({ setStatus }) => {
           className={`${
             window.location.pathname === '/active' ? 'currentPage' : 'nav-link'
           }`}
-          aria-current='page'
           href='/active'
-          data-bs-toggle='tab'
-          role='tab'
-          aria-controls='Active'
-          aria-selected='true'
         >
           Active
         </Link>
@@ -49,12 +36,7 @@ const Nav = ({ setStatus }) => {
               ? 'currentPage'
               : 'nav-link'
           }`}
-          aria-current='page'
           href='/completed'
-          data-bs-toggle='tab'
-          role='tab'
-          aria-controls='Completed'
-          aria-selected='false'
         >
           Completed
         </Link>

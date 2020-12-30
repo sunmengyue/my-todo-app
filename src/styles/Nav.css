@@ -1,5 +1,12 @@
-.nav {
-  border-bottom: 1px solid #bbbbbb;
+#navbar {
+  font-size: 1rem;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin-top: 3rem;
+  border-bottom: 1px solid #bdbdbd;
+  align-items: flex-end;
+  margin-bottom: 2rem;
 }
 
 .nav-link:hover {
@@ -13,14 +20,14 @@
   content: '';
   position: absolute;
   background-color: #6610f2;
+  border-radius: 5px;
 }
 
 .nav-link {
-  font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
-  color: black;
-  padding: 20px 0px;
+  color: #333;
+  padding: 15px 0px;
   margin: 0px 20px;
   display: inline-block;
   position: relative;
@@ -28,11 +35,10 @@
 }
 
 .currentPage {
-  font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
   color: #0d6efd;
-  padding: 20px 0px;
+  padding: 15px 0px;
   margin: 0px 20px;
   display: inline-block;
   position: relative;

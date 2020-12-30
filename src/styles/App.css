@@ -3,8 +3,14 @@
 .title {
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 42.26px;
   color: #333;
   margin-top: 2rem;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+  padding: 0 20px;
 }
