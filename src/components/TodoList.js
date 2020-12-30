@@ -37,17 +37,17 @@ const TodoList = ({
           <i className='material-icons md-48 danger'>priority_high</i>Are you
           sure you want to delete all tasks
         </p>
-        <div className='float-end'>
-          <button type='button' id='cancleButton' onClick={handleClose}>
+        <div>
+          <button className='btn btn-cancle' onClick={handleClose}>
             No
           </button>
-          <button type='button' id='confirmButton' onClick={confirmDelete}>
+          <button className='btn btn-confirm' onClick={confirmDelete}>
             Yes
           </button>
         </div>
       </Modal>
 
-      <div className='list-group mt-5'>{todoItems}</div>
+      <div className='todo-list'>{todoItems}</div>
       {window.location.pathname === '/completed' ? (
         <button id='deleteAllButton' type='button' onClick={handleShow}>
           Delete All

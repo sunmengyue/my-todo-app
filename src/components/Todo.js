@@ -13,7 +13,7 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo, editTodo }) => {
   };
 
   return (
-    <div className='d-flex flex-row align-items-center mb-3'>
+    <div>
       {isEditing ? (
         <TodoEditForm
           todo={todo}
@@ -22,37 +22,38 @@ const Todo = ({ todo, deleteTodo, id, toggleTodo, editTodo }) => {
           closeEdit={closeEdit}
         />
       ) : (
-        <>
-          <label className='list-group-item border-0 me-auto'>
+        <div className='list-group-item'>
+          <label className='todo-task'>
             <input
-              className='form-check-input me-2'
               type='checkbox'
               value=''
               checked={todo.completed}
               onChange={() => toggleTodo(id)}
             />
-            <span className={todo.completed ? 'task-label' : ''}>
+            <span className={todo.completed ? 'strike-through' : ''}>
               {todo.task}
             </span>
           </label>
-          {window.location.pathname === '/completed' ? (
-            ''
-          ) : (
-            <i
-              className='material-icons md-36 md-dark me-5'
-              onClick={toggleEditingStatus}
-            >
-              edit
-            </i>
-          )}
+          <div className='icons'>
+            {window.location.pathname === '/completed' ? (
+              ''
+            ) : (
+              <i
+                className='edit material-icons md-24 md-dark'
+                onClick={toggleEditingStatus}
+              >
+                edit
+              </i>
+            )}
 
-          <i
-            className='material-icons md-36 md-dark'
-            onClick={() => deleteTodo(id)}
-          >
-            delete
-          </i>
-        </>
+            <i
+              className='delete material-icons md-24 md-dark'
+              onClick={() => deleteTodo(id)}
+            >
+              delete
+            </i>
+          </div>
+        </div>
       )}
     </div>
   );
