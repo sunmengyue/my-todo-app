@@ -11,7 +11,7 @@ const All = ({
   filteredTodos,
 }) => {
   return (
-    <div className='container mt-5'>
+    <div className='container'>
       <TodoForm todos={todos} addTodo={addTodo} />
       <TodoList
         todos={todos}

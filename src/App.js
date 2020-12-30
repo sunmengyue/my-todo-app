@@ -64,40 +64,40 @@ const App = () => {
   }, [todos, status]);
 
   return (
-    <div className='container mt-5'>
-      <h1 className='text-center mb-5' id='title'>
-        Task Slayer
-      </h1>
-      <Nav setStatus={setStatus} />
-      <Route path='/'>
-        <All
-          todos={todos}
-          addTodo={addTodo}
-          toggleTodo={toggleTodo}
-          deleteTodo={deleteTodo}
-          editTodo={editTodo}
-          filteredTodos={filteredTodos}
-        />
-      </Route>
-      <Route path='/active'>
-        <Active
-          todos={todos}
-          addTodo={addTodo}
-          toggleTodo={toggleTodo}
-          deleteTodo={deleteTodo}
-          editTodo={editTodo}
-          filteredTodos={filteredTodos}
-        />
-      </Route>
-      <Route path='/completed'>
-        <Completed
-          todos={todos}
-          deleteTodo={deleteTodo}
-          toggleTodo={toggleTodo}
-          filteredTodos={filteredTodos}
-          deleteAll={deleteAll}
-        />
-      </Route>
+    <div>
+      <h1 className='title'>Task Slayer</h1>
+      <div className='container'>
+        <Nav setStatus={setStatus} />
+        <Route path='/'>
+          <All
+            todos={todos}
+            addTodo={addTodo}
+            toggleTodo={toggleTodo}
+            deleteTodo={deleteTodo}
+            editTodo={editTodo}
+            filteredTodos={filteredTodos}
+          />
+        </Route>
+        <Route path='/active'>
+          <Active
+            todos={todos}
+            addTodo={addTodo}
+            toggleTodo={toggleTodo}
+            deleteTodo={deleteTodo}
+            editTodo={editTodo}
+            filteredTodos={filteredTodos}
+          />
+        </Route>
+        <Route path='/completed'>
+          <Completed
+            todos={todos}
+            deleteTodo={deleteTodo}
+            toggleTodo={toggleTodo}
+            filteredTodos={filteredTodos}
+            deleteAll={deleteAll}
+          />
+        </Route>
+      </div>
     </div>
   );
 };

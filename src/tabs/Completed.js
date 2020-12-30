@@ -9,7 +9,7 @@ const Completed = ({
   deleteAll,
 }) => {
   return (
-    <div className='container mt-5'>
+    <div className='container'>
       <TodoList
         todos={todos}
         deleteTodo={deleteTodo}
