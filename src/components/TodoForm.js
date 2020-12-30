@@ -14,22 +14,15 @@ const TodoForm = ({ addTodo }) => {
     setValue('');
   }
   return (
-    <form className='d-flex align-items-center' onSubmit={handleSubmit}>
+    <form id='todo-form' onSubmit={handleSubmit}>
       <input
-        placeholder='add todo details'
+        placeholder='add todos'
         type='text'
-        className='form-control me-5 fs-4 shadow-none'
         value={value}
         onChange={handleChange}
         id='task-input'
       />
-      <button
-        type='submit'
-        className='btn btn-primary fs-4'
-        id='task-add-button'
-      >
-        Add
-      </button>
+      <button type='submit'>Add</button>
     </form>
   );
 };

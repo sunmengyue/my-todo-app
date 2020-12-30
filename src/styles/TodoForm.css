@@ -1,36 +1,30 @@
-#task-input,
-#task-add-button {
-  padding: 0.8em;
-  border-radius: 15px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+#todo-form {
+  display: flex;
 }
 
-button {
-  border-radius: 10px;
-  border: none;
+#todo-form input {
+  flex-grow: 4;
+  margin-right: 2rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+#todo-form input::placeholder {
+  color: #828282;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.07px;
+}
+
+#todo-form button {
+  font-family: 'Montserrat', sans-serif;
   color: #fff;
+  background-color: #2f80ed;
+  flex-grow: 0.25;
+  border: none;
   padding: 10px 20px;
-}
-
-#cancleButton {
-  background-color: #343a40;
-  margin-right: 0.5rem;
-  padding: 10px 20px;
-}
-
-#saveButton {
-  background-color: #0d6efd;
-}
-
-.edit-form {
-  border: 1px solid #bbb;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.form-control {
-  width: 90%;
-}
-
-#task-add-button {
-  width: 14%;
+  border-radius: 12px;
+  font-weight: 600;
 }
