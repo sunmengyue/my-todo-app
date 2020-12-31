@@ -1,9 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 .edit-form {
-  width: 70%;
+  background-color: #c8c8c8;
+  width: 85%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.form-control {
-  font-size: 2rem;
-  padding: 0.5em;
-  border-radius: 15px;
+.edit-form input {
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 75%;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.edit-form .btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.edit-form .btn .btn-cancel,
+.edit-form .btn .btn-save {
+  padding: 8px 15px;
+  margin-left: 0.5rem;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.edit-form .btn .btn-cancel:hover,
+.edit-form .btn .btn-save:hover {
+  cursor: pointer;
+}
+
+.edit-form .btn .btn-cancel {
+  background-color: #df4759;
+}
+.edit-form .btn .btn-cancel:hover {
+  background-color: #c90d23;
+}
+.edit-form .btn .btn-save {
+  background-color: #2f80ed;
+}
+.edit-form .btn .btn-save:hover {
+  background-color: #073775;
 }

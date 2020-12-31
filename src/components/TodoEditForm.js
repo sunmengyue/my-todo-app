@@ -16,15 +16,16 @@ const TodoEditForm = ({ todo, editTodo, toggle, closeEdit }) => {
     <form onSubmit={handleInputSubmit} className='edit-form'>
       <input
         type='text'
-        className='form-control mb-3 form-control-lg fs-4 shadow-none'
         value={value}
         onChange={handleChange}
         autoFocus
       ></input>
-      <button id='cancleButton' onClick={closeEdit}>
-        Cancle
-      </button>
-      <button id='saveButton'>Save</button>
+      <div className='btn'>
+        <button className='btn btn-cancel' onClick={closeEdit}>
+          Cancel
+        </button>
+        <button className='btn btn-save'>Save</button>
+      </div>
     </form>
   );
 };
