@@ -14,7 +14,7 @@
 #todo-form input::placeholder {
   color: #828282;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 17.07px;
 }
 

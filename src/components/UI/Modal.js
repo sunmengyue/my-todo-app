@@ -7,7 +7,7 @@ const Modal = ({ children, show, handleClose }) => {
     <>
       <Backdrop show={show} handleClose={handleClose} />
       <div
-        className='confirmBox'
+        className='confirm-box'
         style={{
           transform: show ? 'translateY(0)' : 'translateY(-100vh)',
           opacity: show ? '1' : '0',

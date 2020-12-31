@@ -1,2 +1,53 @@
-.todo-list {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+.delete-container {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: flex-end;
+}
+
+.delete-container .btn-delete-all {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #d9534f;
+}
+
+.delete-container .btn-delete-all:hover {
+  background-color: #b30b05;
+  cursor: pointer;
+}
+
+.btn.btn-confirm,
+.btn.btn-cancel {
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#btns-for-modal {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn.btn-cancel {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0275d8;
+  margin-right: 10px;
+}
+.btn.btn-cancel:hover {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #073775;
+}
+
+.btn.btn-confirm {
+  background-color: #292b2c;
+}
+.btn.btn-confirm:hover {
+  background-color: #000;
 }

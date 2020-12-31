@@ -37,8 +37,8 @@ const TodoList = ({
           <i className='material-icons md-48 danger'>priority_high</i>Are you
           sure you want to delete all tasks
         </p>
-        <div>
-          <button className='btn btn-cancle' onClick={handleClose}>
+        <div id='btns-for-modal'>
+          <button className='btn btn-cancel' onClick={handleClose}>
             No
           </button>
           <button className='btn btn-confirm' onClick={confirmDelete}>
@@ -49,9 +49,12 @@ const TodoList = ({
 
       <div className='todo-list'>{todoItems}</div>
       {window.location.pathname === '/completed' ? (
-        <button id='deleteAllButton' type='button' onClick={handleShow}>
-          Delete All
-        </button>
+        <div className='delete-container'>
+          <button className='btn-delete-all' type='button' onClick={handleShow}>
+            <i className='delete material-icons md-18 md-light'>delete</i>
+            Delete All
+          </button>
+        </div>
       ) : (
         ''
       )}

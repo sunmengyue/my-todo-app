@@ -40,10 +40,10 @@
 }
 
 .edit-form .btn .btn-cancel {
-  background-color: #df4759;
+  background-color: #292b2c;
 }
 .edit-form .btn .btn-cancel:hover {
-  background-color: #c90d23;
+  background-color: #000;
 }
 .edit-form .btn .btn-save {
   background-color: #2f80ed;
