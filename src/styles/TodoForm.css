@@ -28,3 +28,8 @@
   border-radius: 12px;
   font-weight: 600;
 }
+
+button:focus,
+input:focus {
+  outline: none;
+}

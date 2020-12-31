@@ -51,3 +51,8 @@
 .edit-form .btn .btn-save:hover {
   background-color: #073775;
 }
+
+button:focus,
+input:focus {
+  outline: none;
+}

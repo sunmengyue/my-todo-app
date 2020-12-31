@@ -4,3 +4,8 @@
   box-sizing: border-box;
   line-height: 1.7em;
 }
+
+button:focus,
+input:focus {
+  outline: none;
+}
