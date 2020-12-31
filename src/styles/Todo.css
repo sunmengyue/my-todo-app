@@ -39,6 +39,7 @@
 .list-group-item {
   font-size: 1.125rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-top: 1.2rem;
@@ -69,3 +70,10 @@
 .icons .edit {
   margin-right: 1rem;
 }
+
+@media only screen and (max-width: 500px) {
+  .list-group-item {
+    display: block;
+    border-bottom: 1px dotted #bdbdbd;
+  }
+} ;
