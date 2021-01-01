@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 .edit-form {
   background-color: #c8c8c8;
+  margin-top: 1rem;
   padding: 1.5rem;
   border-radius: 10px;
   display: flex;
