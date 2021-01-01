@@ -30,7 +30,8 @@
   border-radius: 10px;
 }
 
-#btns-for-modal {
+.btn {
+  margin-top: 10px;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   justify-content: flex-end;
@@ -43,6 +44,7 @@
 .btn.btn-cancel:hover {
   font-family: 'Montserrat', sans-serif;
   background-color: #073775;
+  cursor: pointer;
 }
 
 .btn.btn-confirm {
@@ -50,4 +52,16 @@
 }
 .btn.btn-confirm:hover {
   background-color: #000;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 265px) {
+  .btn {
+    flex-direction: column;
+  }
+  .btn.btn-confirm,
+  .btn.btn-cancel {
+    width: 50%;
+    padding: 5px 10px;
+  }
 }

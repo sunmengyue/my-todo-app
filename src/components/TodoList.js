@@ -37,7 +37,7 @@ const TodoList = ({
           <i className='material-icons md-48 danger'>priority_high</i>Are you
           sure you want to delete all tasks
         </p>
-        <div id='btns-for-modal'>
+        <div className='btn'>
           <button className='btn btn-cancel' onClick={handleClose}>
             No
           </button>
