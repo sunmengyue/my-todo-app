@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 .edit-form {
   background-color: #c8c8c8;
-  width: 85%;
   padding: 1.5rem;
   border-radius: 10px;
   display: flex;
@@ -9,16 +8,19 @@
   justify-content: space-between;
 }
 
-.edit-form input {
+.edit-form .form-control {
+  flex-grow: 8;
   border: none;
+  width: 85%;
   border-radius: 12px;
   padding: 0.5rem;
-  width: 75%;
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
+  margin-right: 1rem;
 }
 
 .edit-form .btn {
+  flex-grow: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,7 +31,6 @@
 .edit-form .btn .btn-cancel,
 .edit-form .btn .btn-save {
   padding: 8px 15px;
-  margin-left: 0.5rem;
   border-radius: 10px;
   color: #fff;
 }
@@ -55,4 +56,27 @@
 button:focus,
 input:focus {
   outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .edit-form {
+    display: block;
+  }
+  .edit-form .form-control {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .edit-form .btn {
+    justify-content: flex-start;
+    flex-grow: 0;
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .edit-form .btn {
+    flex-direction: column;
+    align-items: space-between;
+    margin-top: 10px;
+  }
 }

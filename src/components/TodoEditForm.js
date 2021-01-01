@@ -15,6 +15,7 @@ const TodoEditForm = ({ todo, editTodo, toggle, closeEdit }) => {
   return (
     <form onSubmit={handleInputSubmit} className='edit-form'>
       <input
+        className='form-control'
         type='text'
         value={value}
         onChange={handleChange}
