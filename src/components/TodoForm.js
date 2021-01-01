@@ -16,6 +16,7 @@ const TodoForm = ({ addTodo }) => {
   return (
     <form id='todo-form' onSubmit={handleSubmit}>
       <input
+        className='form-control'
         placeholder='add todos'
         type='text'
         value={value}

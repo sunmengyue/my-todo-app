@@ -3,7 +3,7 @@
   display: flex;
 }
 
-#todo-form input {
+#todo-form .form-control {
   flex-grow: 4;
   margin-right: 2rem;
   border: 1px solid #bdbdbd;
@@ -11,7 +11,7 @@
   padding: 1rem;
 }
 
-#todo-form input::placeholder {
+#todo-form .form-control::placeholder {
   color: #828282;
   font-weight: 400;
   font-size: 1rem;
@@ -32,4 +32,14 @@
 button:focus,
 input:focus {
   outline: none;
+}
+
+@media screen and (max-width: 350px) {
+  #todo-form {
+    display: block;
+  }
+
+  #todo-form button {
+    margin-top: 15px;
+  }
 }
