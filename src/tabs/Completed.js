@@ -6,7 +6,7 @@ const Completed = ({
   deleteTodo,
   toggleTodo,
   filteredTodos,
-  deleteAll,
+  deleteAllCompleted,
 }) => {
   return (
     <div className='container'>
@@ -15,7 +15,7 @@ const Completed = ({
         deleteTodo={deleteTodo}
         toggleTodo={toggleTodo}
         filteredTodos={filteredTodos}
-        deleteAll={deleteAll}
+        deleteAllCompleted={deleteAllCompleted}
       />
     </div>
   );

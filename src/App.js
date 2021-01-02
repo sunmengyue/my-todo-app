@@ -8,7 +8,6 @@ import './styles/App.css';
 
 const App = () => {
   const initialTodos = JSON.parse(localStorage.getItem('todos')) || [];
-
   const [todos, setTodos] = useState(initialTodos);
   const [status, setStatus] = useState('All');
   const [filteredTodos, setFilteredTodos] = useState([]);
@@ -54,8 +53,8 @@ const App = () => {
     }
   };
 
-  const deleteAll = () => {
-    setTodos([]);
+  const deleteAllCompleted = () => {
+    setTodos(todos.filter((todo) => todo.completed === false));
   };
 
   useEffect(() => {
@@ -93,7 +92,7 @@ const App = () => {
           deleteTodo={deleteTodo}
           toggleTodo={toggleTodo}
           filteredTodos={filteredTodos}
-          deleteAll={deleteAll}
+          deleteAllCompleted={deleteAllCompleted}
         />
       </Route>
     </div>

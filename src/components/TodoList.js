@@ -8,13 +8,13 @@ const TodoList = ({
   toggleTodo,
   editTodo,
   filteredTodos,
-  deleteAll,
+  deleteAllCompleted,
 }) => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
   const confirmDelete = () => {
-    deleteAll();
+    deleteAllCompleted();
     handleClose();
   };
 
