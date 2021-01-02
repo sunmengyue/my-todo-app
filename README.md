@@ -35,8 +35,8 @@
 ## Overview
 
 ![overview](./wiki/overview.png)
-![editing](./wiki/edit.png)
 ![delete](./wiki/deleteAll.png)
+![editing](./wiki/edit.png)
 
 - You can [click here](https://task-slayer-70909.herokuapp.com/) to see the app demo
 - I am teaching myself front-end web development and now my main focus is React.
@@ -77,7 +77,7 @@ $ npm install
 $ npm start
 ```
 
-Notice that The branch I finally deployed is **pureHTMLCss**.
+Notice that the branch deployed is **pureHTMLCss**.
 
 ## Acknowledgements
 
