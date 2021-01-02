@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import useClickOutside from './util/useClickOutside';
 import '../styles/TodoEditForm.css';
 
 const TodoEditForm = ({ todo, editTodo, toggle, closeEdit }) => {
@@ -12,8 +13,13 @@ const TodoEditForm = ({ todo, editTodo, toggle, closeEdit }) => {
     setValue('');
     toggle();
   };
+
+  const domNode = useClickOutside(() => {
+    closeEdit();
+  });
+
   return (
-    <form onSubmit={handleInputSubmit} className='edit-form'>
+    <form ref={domNode} onSubmit={handleInputSubmit} className='edit-form'>
       <input
         className='form-control'
         type='text'
