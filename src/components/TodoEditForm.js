@@ -14,6 +14,12 @@ const TodoEditForm = ({ todo, editTodo, toggle, closeEdit }) => {
     toggle();
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleInputSubmit(e);
+    }
+  };
+
   const domNode = useClickOutside(() => {
     closeEdit();
   });
@@ -25,13 +31,16 @@ const TodoEditForm = ({ todo, editTodo, toggle, closeEdit }) => {
         type='text'
         value={value}
         onChange={handleChange}
+        onKeyPress={handleKeyPress}
         autoFocus
       ></input>
       <div className='btn'>
         <button className='btn btn-cancel' onClick={closeEdit}>
           Cancel
         </button>
-        <button className='btn btn-save'>Save</button>
+        <button type='submit' className='btn btn-save'>
+          Save
+        </button>
       </div>
     </form>
   );
